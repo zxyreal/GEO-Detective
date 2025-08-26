@@ -83,7 +83,7 @@ python test_mcp_geolocation.py --model-provider openai --model-name gpt-4-turbo
 ```bash
 # Just specify the model name
 python test_mcp_geolocation.py --model-provider vertex --model-name gemini-2.5-pro
-``
+```
 
 ## Example Usage
 
