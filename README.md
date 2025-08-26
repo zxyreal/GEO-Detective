@@ -17,7 +17,8 @@ geo_mcp/
 ├── test_mcp_geolocation.py        # Main evaluation script
 ├── correct_difficulty_analysis.py  # Difficulty analysis
 ├── requirements.txt               # Project dependencies
-└── README.md                      # This file
+├── README.md                      # This file
+└── ...
 ```
 
 ## Quick Start
