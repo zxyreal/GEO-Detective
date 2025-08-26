@@ -42,7 +42,7 @@ echo "OPENAI_API_KEY=your_key_here" >> .env
 python test_mcp_geolocation.py --model-provider openai --model-name gpt-4o --max-images 10
 
 # Test Google Gemini (balanced performance)
-python test_mcp_geolocation.py --model-provider google --model-name gemini-1.5-pro --max-images 10
+python test_mcp_geolocation.py --model-provider google --model-name gemini-2.5-pro --max-images 10
 ```
 
 ## Available Models
