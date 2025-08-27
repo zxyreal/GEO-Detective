@@ -100,3 +100,22 @@ python test_mcp_geolocation.py --model-provider vertex --model-name gemini-2.5-p
 # Custom output location
 python test_mcp_geolocation.py --output my_results --max-images 20
 ```
+
+## Generate Accuracy by Difficulty Distribution
+
+First, use `simple_image_rater.py` to generate difficulty distribution:
+```bash
+# Generate visual difficulty ratings for the test dataset
+python simple_image_rater.py
+```
+
+Then, use `correct_difficulty_analysis.py` to combine test results with difficulty ratings:
+```bash
+# Run model evaluation first
+python test_mcp_geolocation.py --max-images 100
+
+# Use correct_difficulty_analysis.py to analyze results by difficulty
+python correct_difficulty_analysis.py
+
+# This will generate enhanced results files with difficulty-based accuracy analysis
+```
