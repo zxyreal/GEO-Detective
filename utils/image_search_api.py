@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Reverse image search API
-Supports reverse search functionality for local image files
-"""
-
 import os
 import sys
 import argparse
