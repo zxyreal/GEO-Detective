@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+"""
+Configuration file for MCP Geolocation Agent Test Modes
+Contains configurable parameters for easy modification without code changes.
+"""
 
 # =============================================================================
 # TEST MODE 3: BASELINE + REVERSE IMAGE SEARCH ANALYSIS CONFIGURATION
