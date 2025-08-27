@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+Corrected Difficulty Analysis Script
+Properly cross-references image IDs between test results and visual difficulty ratings
+"""
+
 import json
 import os
 from typing import Dict, List, Any
