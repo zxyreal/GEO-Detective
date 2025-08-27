@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""
-Test script for evaluating the MCP Geolocation Agent functionality.
-Uses GPT-4 to compare prediction results with ground truth to avoid
-statistical errors caused by differences in wording.
-"""
-
 import os
 import sys
 import json
