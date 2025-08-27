@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+REACT-Style Reverse Image Search Validator
+Enhanced reverse search with think → act process and clue validation
+"""
+
 import json
 import time
 import logging
