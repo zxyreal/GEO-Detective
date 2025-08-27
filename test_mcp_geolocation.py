@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+"""
+Test script for evaluating the MCP Geolocation Agent functionality.
+"""
+
 import os
 import sys
 import json
