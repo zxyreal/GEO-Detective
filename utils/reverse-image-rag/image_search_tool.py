@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+Local Image Reverse Search Tool
+Supports reverse search functionality for local image files
+"""
+
 import os
 import sys
 import threading
