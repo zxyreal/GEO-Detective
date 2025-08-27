@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+"""
+Simple Image Visual Difficulty Rating Script
+
+This script creates a simplified version that uses OpenAI API directly to analyze 
+images and calculate visual difficulty scores based on the weighted heuristic model.
+"""
+
 import os
 import csv
 import json
