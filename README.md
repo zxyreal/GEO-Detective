@@ -117,5 +117,4 @@ python test_mcp_geolocation.py --max-images 100
 # Use correct_difficulty_analysis.py to analyze results by difficulty
 python correct_difficulty_analysis.py
 
-# This will generate enhanced results files with difficulty-based accuracy analysis
 ```
