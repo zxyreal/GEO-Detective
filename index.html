@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="GEO-Detective: Unveiling Location Privacy Risks in Images with LLM Agents">
+  <meta name="description" content="GEO-Detective is an adaptive LLM agent that uses visual clues and external tools to reveal image geolocation privacy risks.">
+  <meta name="keywords" content="GEO-Detective, image geolocation, location privacy, LLM agents, LVLM, computer vision, visual reverse search, ECCV 2026">
+  <meta name="author" content="Xinyu Zhang, Yixin Wu, Boyang Zhang, Chenhao Lin, Chao Shen, Michael Backes, Yang Zhang">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="GEO-Detective">
+  <meta property="og:title" content="GEO-Detective: Unveiling Location Privacy Risks in Images with LLM Agents">
+  <meta property="og:description" content="An adaptive LLM agent that shows how visual clues and external tools amplify image geolocation privacy risks.">
+  <meta property="og:url" content="https://zxyreal.github.io/GEO-Detective/">
+  <meta property="og:image" content="https://zxyreal.github.io/GEO-Detective/static/images/social_preview.png">
+  <meta property="og:image:width" content="1728">
+  <meta property="og:image:height" content="920">
+  <meta property="og:image:alt" content="GEO-Detective research project preview">
+  <meta property="article:author" content="Xinyu Zhang">
+  <meta property="article:section" content="Computer Vision and Privacy">
+  <meta property="article:tag" content="Image Geolocation">
+  <meta property="article:tag" content="LLM Agents">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GEO-Detective: Location Privacy Risks in Images">
+  <meta name="twitter:description" content="An adaptive LLM agent that reveals the privacy risks hidden in everyday photos.">
+  <meta name="twitter:image" content="https://zxyreal.github.io/GEO-Detective/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="GEO-Detective research project preview">
+
+  <meta name="citation_title" content="GEO-Detective: Unveiling Location Privacy Risks in Images with LLM Agents">
+  <meta name="citation_author" content="Zhang, Xinyu">
+  <meta name="citation_author" content="Wu, Yixin">
+  <meta name="citation_author" content="Zhang, Boyang">
+  <meta name="citation_author" content="Lin, Chenhao">
+  <meta name="citation_author" content="Shen, Chao">
+  <meta name="citation_author" content="Backes, Michael">
+  <meta name="citation_author" content="Zhang, Yang">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="European Conference on Computer Vision (ECCV)">
+  <meta name="citation_pdf_url" content="https://zxyreal.github.io/GEO-Detective/static/pdfs/paper.pdf">
+
+  <meta name="theme-color" content="#178ba8">
+  <meta name="msapplication-TileColor" content="#178ba8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>GEO-Detective | ECCV 2026</title>
+  <link rel="icon" type="image/png" href="static/images/cispa.png">
+  <link rel="apple-touch-icon" href="static/images/cispa.png">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "GEO-Detective: Unveiling Location Privacy Risks in Images with LLM Agents",
+    "description": "An adaptive LLM agent that uses visual clues and external tools to reveal image geolocation privacy risks.",
+    "author": [
+      {"@type": "Person", "name": "Xinyu Zhang", "affiliation": {"@type": "Organization", "name": "CISPA Helmholtz Center for Information Security"}},
+      {"@type": "Person", "name": "Yixin Wu", "affiliation": {"@type": "Organization", "name": "CISPA Helmholtz Center for Information Security"}},
+      {"@type": "Person", "name": "Boyang Zhang", "affiliation": {"@type": "Organization", "name": "CISPA Helmholtz Center for Information Security"}},
+      {"@type": "Person", "name": "Chenhao Lin", "affiliation": {"@type": "Organization", "name": "Xi'an Jiaotong University"}},
+      {"@type": "Person", "name": "Chao Shen", "affiliation": {"@type": "Organization", "name": "Xi'an Jiaotong University"}},
+      {"@type": "Person", "name": "Michael Backes", "affiliation": {"@type": "Organization", "name": "CISPA Helmholtz Center for Information Security"}},
+      {"@type": "Person", "name": "Yang Zhang", "affiliation": {"@type": "Organization", "name": "CISPA Helmholtz Center for Information Security"}}
+    ],
+    "datePublished": "2026",
+    "publisher": {"@type": "Organization", "name": "European Conference on Computer Vision"},
+    "url": "https://zxyreal.github.io/GEO-Detective/",
+    "image": "https://zxyreal.github.io/GEO-Detective/static/images/social_preview.png",
+    "keywords": ["image geolocation", "location privacy", "LLM agents", "large vision-language models"],
+    "isAccessibleForFree": true,
+    "mainEntity": {"@type": "WebPage", "@id": "https://zxyreal.github.io/GEO-Detective/"}
+  }
+  </script>
+</head>
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <div class="paper-tag">ECCV 2026 · Malmö</div>
+              <h1 class="title is-1 publication-title"><span class="geo-title">GEO-Detective:</span> Unveiling Location Privacy Risks in Images with LLM Agents</h1>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><a href="mailto:xinyu.zhang@cispa.de">Xinyu Zhang</a><sup>1,2</sup>,</span>
+                <span class="author-block">Yixin Wu<sup>1,2</sup>,</span>
+                <span class="author-block">Boyang Zhang<sup>1,2</sup>,</span>
+                <span class="author-block">Chenhao Lin<sup>3</sup>,</span>
+                <span class="author-block">Chao Shen<sup>3</sup>,</span>
+                <span class="author-block">Michael Backes<sup>1</sup>,</span>
+                <span class="author-block">Yang Zhang<sup>1</sup></span>
+              </div>
+
+              <div class="is-size-6 publication-authors institutions">
+                <span><sup>1</sup>CISPA Helmholtz Center for Information Security</span>
+                <span><sup>2</sup>Saarland University</span>
+                <span><sup>3</sup>Xi'an Jiaotong University</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="static/pdfs/paper.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://github.com/zxyreal/GEO-Detective" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="static/pdfs/poster.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-image"></i></span><span>Poster</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-quote-right"></i></span><span>BibTeX</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <figure class="template-figure">
+            <img class="template-teaser" src="static/images/workflow.png" alt="The four-stage GEO-Detective workflow" loading="eager">
+            <figcaption>GEO-Detective grades image difficulty, selects tools, gathers external evidence, synthesizes geographic clues, and iteratively refines uncertain predictions.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="abstract">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>Images shared on social media often expose geographic cues. While early geolocation methods required expert effort and lacked generalization, large vision-language models now make location inference accessible to ordinary users. To explore the full potential and associated privacy risks, we present <strong>GEO-Detective</strong>, an agent that mimics human reasoning and tool use for image geolocation.</p>
+              <p>The agent follows a four-stage procedure that adaptively selects strategies based on image difficulty and uses specialized tools such as visual reverse search. GEO-Detective improves over baseline LVLMs, especially on images with sparse geographic features, and reduces “unknown” predictions by more than half when external clues are available. Our defense evaluation further shows that agentic geolocation remains difficult to suppress, highlighting the need for stronger location-privacy safeguards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered"><div class="column is-four-fifths"><h2 class="title is-3">Method</h2><p class="section-lead">GEO-Detective mirrors how a human investigator changes strategy as visible clues become weaker.</p></div></div>
+        <div class="method-grid">
+          <article class="method-card"><span>01</span><h3>Visual Feature Analysis</h3><p>Detect landmarks, text, architecture, terrain, and other geographic signals, then estimate image difficulty.</p></article>
+          <article class="method-card"><span>02</span><h3>Strategy Execution</h3><p>Select direct LVLM analysis, experience-augmented prompting, segmentation, or visual reverse search.</p></article>
+          <article class="method-card"><span>03</span><h3>Results Synthesis</h3><p>Compare similar images and web context, then combine the evidence into country, state, and city predictions.</p></article>
+          <article class="method-card"><span>04</span><h3>Iterative Refinement</h3><p>If results remain uncertain, change the strategy, add tools, and repeat within the available resource budget.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="results">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered"><div class="column is-four-fifths"><h2 class="title is-3">Key Results</h2><p class="section-lead">The largest gains appear when images contain sparse or subtle geographic evidence.</p></div></div>
+        <div class="metric-grid-template">
+          <article><strong>47.5%</strong><span>IM2GPS3K accuracy within 25 km</span></article>
+          <article><strong>11.3%</strong><span>IM2GPS3K accuracy within 1 km</span></article>
+          <article><strong>45.8% → 22.6%</strong><span>Unknown rate on difficult images</span></article>
+        </div>
+        <section class="interactive-results" aria-labelledby="interactive-results-title">
+          <div class="chart-header">
+            <div>
+              <span class="eyebrow">Interactive comparison · o3</span>
+              <h3 id="interactive-results-title">Accuracy by image difficulty</h3>
+            </div>
+            <div class="chart-tabs" role="tablist" aria-label="Geographic prediction level">
+              <button class="chart-tab is-active" type="button" role="tab" aria-selected="true" data-level="country">Country</button>
+              <button class="chart-tab" type="button" role="tab" aria-selected="false" data-level="state">State</button>
+              <button class="chart-tab" type="button" role="tab" aria-selected="false" data-level="city">City</button>
+            </div>
+          </div>
+          <div class="chart-legend" aria-hidden="true">
+            <span><i class="legend-swatch baseline-swatch"></i>Baseline</span>
+            <span><i class="legend-swatch agent-swatch"></i>GEO-Detective</span>
+          </div>
+          <div class="chart-frame">
+            <div class="chart-y-label">Accuracy (%)</div>
+            <div class="chart-scale" aria-hidden="true"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div>
+            <div id="interactive-chart" class="bar-chart" role="img" aria-label="Country-level accuracy comparison between the o3 baseline and GEO-Detective"></div>
+          </div>
+          <p id="chart-insight" class="chart-insight" aria-live="polite"></p>
+          <noscript><img class="chart-fallback" src="static/images/results.png" alt="Static accuracy comparison between o3 baseline and GEO-Detective"></noscript>
+        </section>
+        <div class="dataset-strip">
+          <span><strong>MP16-Pro</strong><small>1,000-image test set</small></span>
+          <span><strong>IM2GPS3K</strong><small>3,000 geotagged images</small></span>
+          <span><strong>DoxBench</strong><small>500 recent images</small></span>
+          <span><strong>LVLMs</strong><small>o3 · GPT-4o · Gemini 2.5</small></span>
+        </div>
+        <section class="result-tables" aria-labelledby="selected-results-title">
+          <div class="table-section-header">
+            <div>
+              <span class="eyebrow">From the paper</span>
+              <h3 id="selected-results-title">Selected quantitative results</h3>
+            </div>
+            <p>Switch between benchmark performance and prediction uncertainty.</p>
+          </div>
+          <div class="table-tabs" role="tablist" aria-label="Selected result tables">
+            <button class="table-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="benchmark-panel" data-table="benchmark-panel">Benchmark</button>
+            <button class="table-tab" type="button" role="tab" aria-selected="false" aria-controls="unknown-panel" data-table="unknown-panel">Unknown Rate</button>
+          </div>
+
+          <div id="benchmark-panel" class="table-panel is-active" role="tabpanel">
+            <div class="table-title-row"><div><strong>IM2GPS3K benchmark</strong><span>Geolocation accuracy (%)</span></div><span class="paper-table-tag">Table 2</span></div>
+            <div class="table-scroll">
+              <table class="results-table">
+                <thead><tr><th>Type</th><th>Method</th><th>@1 km</th><th>@25 km</th></tr></thead>
+                <tbody>
+                  <tr class="highlight-row"><td><span class="type-pill">Agent</span></td><td><strong>GEO-Detective (Ours)</strong></td><td>11.3</td><td class="best-cell">47.5</td></tr>
+                  <tr><td>Agent</td><td>GeoMiner</td><td>10.8</td><td>46.7</td></tr>
+                  <tr><td>Agent</td><td>smileGeo</td><td>10.9</td><td>38.2</td></tr>
+                  <tr class="group-start"><td>LVLM</td><td>G3</td><td class="best-overall">16.6</td><td>40.9</td></tr>
+                  <tr><td>LVLM</td><td>Img2Loc</td><td>15.3</td><td>39.8</td></tr>
+                  <tr><td>LVLM</td><td>GeoReasoner</td><td>9.9</td><td>33.8</td></tr>
+                  <tr class="group-start"><td>Trained</td><td>PIGEON</td><td>11.3</td><td>36.7</td></tr>
+                  <tr><td>Trained</td><td>GeoCLIP</td><td>14.1</td><td>34.5</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="result-note"><strong>Takeaway:</strong> GEO-Detective achieves the best @25 km result among the evaluated agentic LVLM frameworks. G3 remains strongest at @1 km overall.</p>
+          </div>
+
+          <div id="unknown-panel" class="table-panel" role="tabpanel" hidden>
+            <div class="table-title-row"><div><strong>Unknown rate under o3</strong><span>Lower is better (%)</span></div><span class="paper-table-tag">Table 3</span></div>
+            <div class="table-scroll">
+              <table class="results-table">
+                <thead><tr><th>Difficulty (n)</th><th>Baseline</th><th>GEO-Detective</th><th>Reduction</th></tr></thead>
+                <tbody>
+                  <tr><td>Easy (269)</td><td>21.9</td><td>18.6</td><td class="reduction-cell">−3.3 pp</td></tr>
+                  <tr><td>Moderate (281)</td><td>29.2</td><td>26.3</td><td class="reduction-cell">−2.9 pp</td></tr>
+                  <tr class="highlight-row"><td><strong>Difficult (349)</strong></td><td>45.8</td><td class="best-cell">22.6</td><td class="reduction-cell"><strong>−23.2 pp</strong></td></tr>
+                  <tr class="highlight-row"><td><strong>Very Difficult (97)</strong></td><td>55.7</td><td class="best-cell">28.9</td><td class="reduction-cell"><strong>−26.8 pp</strong></td></tr>
+                  <tr><td>Extremely Difficult (4)<sup>†</sup></td><td>75.0</td><td>50.0</td><td class="reduction-cell">−25.0 pp</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="result-note"><strong>Takeaway:</strong> the largest well-supported reductions occur on Difficult and Very Difficult images. <sup>†</sup>The Extremely Difficult subset has only four samples.</p>
+          </div>
+
+        </section>
+      </div>
+    </section>
+
+    <section class="section" id="defenses">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered"><div class="column is-four-fifths"><h2 class="title is-3">Privacy Defenses</h2><p class="section-lead">A visible geolocation-prohibition watermark was the only tested defense that strongly suppressed agent outputs.</p></div></div>
+        <div class="defense-grid-template">
+          <article class="best-defense"><span>84% unknown</span><h3>Watermark</h3><p>Explicitly tells the model that geolocation is prohibited.</p></article>
+          <article><span>17% unknown</span><h3>Visual Prompt Injection</h3><p>Adds misleading geographic text to the image.</p></article>
+          <article><span>18% unknown</span><h3>Trigger-based</h3><p>Introduces a small visual intervention signal.</p></article>
+          <article><span>23% unknown</span><h3>EXIF Modification</h3><p>Changes metadata but leaves visible scene clues intact.</p></article>
+        </div>
+        <div class="insight-note"><strong>Takeaway:</strong> location-privacy safeguards must address visible scene content and agentic evidence gathering—not only metadata.</div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="poster">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered"><div class="column is-four-fifths"><h2 class="title is-3">Poster</h2><p class="section-lead">ECCV 2026 · Malmö, Sweden</p></div></div>
+        <a class="poster-link" href="static/pdfs/poster.pdf" target="_blank" aria-label="Open the GEO-Detective poster PDF">
+          <img src="static/images/poster.png" alt="GEO-Detective ECCV 2026 poster" loading="lazy">
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i><span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@inproceedings{zhang2026geodetective,
+  title     = {GEO-Detective: Unveiling Location Privacy Risks
+               in Images with LLM Agents},
+  author    = {Zhang, Xinyu and Wu, Yixin and Zhang, Boyang and
+               Lin, Chenhao and Shen, Chao and Backes, Michael and Zhang, Yang},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026},
+  url       = {https://github.com/zxyreal/GEO-Detective}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <img class="footer-logo" src="static/images/cispa.png" alt="CISPA Helmholtz Center for Information Security">
+            <p>This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.</p>
+            <p>The website source is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
